@@ -115,6 +115,8 @@ jobs:
             npm audit fix --audit-level=critical --force
             npm audit fix --audit-level=critical --force
             npm audit --audit-level=critical
+            
+          
   scan-backend:
     docker:
       - image: circleci/node:13.8.0
@@ -130,9 +132,7 @@ jobs:
             npm audit fix --audit-level=critical --force
             npm audit fix --audit-level=critical --force
             npm audit --audit-level=critical
-      - slack/notify:
-          event: fail
-          template: basic_fail_1
+
   deploy-infrastructure:
     docker:
       - image: amazon/aws-cli
@@ -205,6 +205,7 @@ jobs:
             - project/backend
       - destroy-environment:
           workflow_id: ${CIRCLE_WORKFLOW_ID:0:7}
+
   run-migrations:
     docker:
       - image: circleci/node:13.8.0 # safest to use to avoid migration errors
