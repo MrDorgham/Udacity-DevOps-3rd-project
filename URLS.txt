@@ -1,5 +1,0 @@
-Public GitHub repository [URL01]
-https://github.com/MrDorgham/udacity_DevOps_3rd-project
-
-Public URL to My Frontend  [URL02]
-https://udapeople-427bbbf.s3.amazonaws.com/index.html#/employees
